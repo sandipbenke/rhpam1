@@ -6,12 +6,35 @@ package com.solarvillage.rhpam.poc.datamodal;
 
 public class PermitResponse implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public PermitResponse() {
-    }
+	@org.kie.api.definition.type.Label(value = "requestid")
+	private java.lang.String requestid;
+	@org.kie.api.definition.type.Label(value = "status")
+	private java.lang.String status;
 
+	public PermitResponse() {
+	}
 
+	public java.lang.String getRequestid() {
+		return this.requestid;
+	}
 
+	public void setRequestid(java.lang.String requestid) {
+		this.requestid = requestid;
+	}
+
+	public java.lang.String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
+	public PermitResponse(java.lang.String requestid, java.lang.String status) {
+		this.requestid = requestid;
+		this.status = status;
+	}
 
 }
