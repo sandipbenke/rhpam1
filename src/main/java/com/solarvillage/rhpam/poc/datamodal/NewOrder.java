@@ -6,12 +6,38 @@ package com.solarvillage.rhpam.poc.datamodal;
 
 public class NewOrder implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public NewOrder() {
-    }
+	@org.kie.api.definition.type.Label(value = "orderID")
+	private java.lang.String orderID;
+	@org.kie.api.definition.type.Label(value = "projectPermits")
+	private java.util.List<com.solarvillage.rhpam.poc.datamodal.ProjectPermit> projectPermits;
 
+	public NewOrder() {
+	}
 
+	public java.lang.String getOrderID() {
+		return this.orderID;
+	}
 
+	public void setOrderID(java.lang.String orderID) {
+		this.orderID = orderID;
+	}
+
+	public java.util.List<com.solarvillage.rhpam.poc.datamodal.ProjectPermit> getProjectPermits() {
+		return this.projectPermits;
+	}
+
+	public void setProjectPermits(
+			java.util.List<com.solarvillage.rhpam.poc.datamodal.ProjectPermit> projectPermits) {
+		this.projectPermits = projectPermits;
+	}
+
+	public NewOrder(
+			java.lang.String orderID,
+			java.util.List<com.solarvillage.rhpam.poc.datamodal.ProjectPermit> projectPermits) {
+		this.orderID = orderID;
+		this.projectPermits = projectPermits;
+	}
 
 }
