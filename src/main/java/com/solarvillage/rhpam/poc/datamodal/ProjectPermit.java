@@ -6,12 +6,70 @@ package com.solarvillage.rhpam.poc.datamodal;
 
 public class ProjectPermit implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public ProjectPermit() {
-    }
+	@org.kie.api.definition.type.Label(value = "permitType")
+	private java.lang.String permitType;
+	@org.kie.api.definition.type.Label(value = "status")
+	private java.lang.String status;
+	@org.kie.api.definition.type.Label(value = "notes")
+	private java.lang.String notes;
+	@org.kie.api.definition.type.Label(value = "requestedDate")
+	private java.util.Date requestedDate;
+	@org.kie.api.definition.type.Label(value = "lastUpdateDate")
+	private java.util.Date lastUpdateDate;
 
+	public ProjectPermit() {
+	}
 
+	public java.lang.String getPermitType() {
+		return this.permitType;
+	}
 
+	public void setPermitType(java.lang.String permitType) {
+		this.permitType = permitType;
+	}
+
+	public java.lang.String getStatus() {
+		return this.status;
+	}
+
+	public void setStatus(java.lang.String status) {
+		this.status = status;
+	}
+
+	public java.lang.String getNotes() {
+		return this.notes;
+	}
+
+	public void setNotes(java.lang.String notes) {
+		this.notes = notes;
+	}
+
+	public java.util.Date getRequestedDate() {
+		return this.requestedDate;
+	}
+
+	public void setRequestedDate(java.util.Date requestedDate) {
+		this.requestedDate = requestedDate;
+	}
+
+	public java.util.Date getLastUpdateDate() {
+		return this.lastUpdateDate;
+	}
+
+	public void setLastUpdateDate(java.util.Date lastUpdateDate) {
+		this.lastUpdateDate = lastUpdateDate;
+	}
+
+	public ProjectPermit(java.lang.String permitType, java.lang.String status,
+			java.lang.String notes, java.util.Date requestedDate,
+			java.util.Date lastUpdateDate) {
+		this.permitType = permitType;
+		this.status = status;
+		this.notes = notes;
+		this.requestedDate = requestedDate;
+		this.lastUpdateDate = lastUpdateDate;
+	}
 
 }
