@@ -72,4 +72,10 @@ public class ProjectPermit implements java.io.Serializable {
 		this.lastUpdateDate = lastUpdateDate;
 	}
 
+    public ProjectPermit(java.lang.String notes, java.util.Date requestedDate) {
+		
+		this.notes = notes;
+		this.requestedDate = requestedDate;
+		
+	}
 }
