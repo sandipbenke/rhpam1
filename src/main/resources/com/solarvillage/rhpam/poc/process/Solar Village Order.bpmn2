@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_0R2hoFF-EemBqtiz4qMe0A" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_GWkEQFF_EemBqtiz4qMe0A" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="_newOrderItem" structureRef="com.solarvillage.rhpam.poc.datamodal.NewOrder"/>
   <bpmn2:itemDefinition id="_electricalPermitSubmitURLItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_electricalPermitStatusURLItem" structureRef="String"/>
   <bpmn2:itemDefinition id="_electricalPermitRescindURLItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__9F11D643-3D5D-4099-BFD1-334B1406727C_newOrderInputXItem" structureRef="com.solarvillage.rhpam.poc.datamodal.NewOrder"/>
+  <bpmn2:itemDefinition id="__9F11D643-3D5D-4099-BFD1-334B1406727C_submitURLInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__9F11D643-3D5D-4099-BFD1-334B1406727C_statusURLInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__9F11D643-3D5D-4099-BFD1-334B1406727C_rescindURLInputXItem" structureRef="String"/>
   <bpmn2:process id="com.solarvillage.rhpam.poc.process.SolarVillageOrder" drools:packageName="com.solarvillage.rhpam.poc.process" drools:version="1.0" name="Solar Village Order" isExecutable="true">
     <bpmn2:property id="newOrder" itemSubjectRef="_newOrderItem"/>
     <bpmn2:property id="electricalPermitSubmitURL" itemSubjectRef="_electricalPermitSubmitURLItem"/>
@@ -35,6 +39,35 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_5CFD7147-884A-4891-AD6A-03B225055B52</bpmn2:incoming>
       <bpmn2:outgoing>_0D38357F-84B1-4155-BD65-C4F77D05AE62</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_GWlSYFF_EemBqtiz4qMe0A">
+        <bpmn2:dataInput id="_9F11D643-3D5D-4099-BFD1-334B1406727C_newOrderInputX" drools:dtype="com.solarvillage.rhpam.poc.datamodal.NewOrder" itemSubjectRef="__9F11D643-3D5D-4099-BFD1-334B1406727C_newOrderInputXItem" name="newOrder"/>
+        <bpmn2:dataInput id="_9F11D643-3D5D-4099-BFD1-334B1406727C_submitURLInputX" drools:dtype="String" itemSubjectRef="__9F11D643-3D5D-4099-BFD1-334B1406727C_submitURLInputXItem" name="submitURL"/>
+        <bpmn2:dataInput id="_9F11D643-3D5D-4099-BFD1-334B1406727C_statusURLInputX" drools:dtype="String" itemSubjectRef="__9F11D643-3D5D-4099-BFD1-334B1406727C_statusURLInputXItem" name="statusURL"/>
+        <bpmn2:dataInput id="_9F11D643-3D5D-4099-BFD1-334B1406727C_rescindURLInputX" drools:dtype="String" itemSubjectRef="__9F11D643-3D5D-4099-BFD1-334B1406727C_rescindURLInputXItem" name="rescindURL"/>
+        <bpmn2:inputSet id="_GWlSYVF_EemBqtiz4qMe0A">
+          <bpmn2:dataInputRefs>_9F11D643-3D5D-4099-BFD1-334B1406727C_newOrderInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_9F11D643-3D5D-4099-BFD1-334B1406727C_submitURLInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_9F11D643-3D5D-4099-BFD1-334B1406727C_statusURLInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_9F11D643-3D5D-4099-BFD1-334B1406727C_rescindURLInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_GWlSYlF_EemBqtiz4qMe0A"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_GWlSY1F_EemBqtiz4qMe0A">
+        <bpmn2:sourceRef>newOrder</bpmn2:sourceRef>
+        <bpmn2:targetRef>_9F11D643-3D5D-4099-BFD1-334B1406727C_newOrderInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GWlSZFF_EemBqtiz4qMe0A">
+        <bpmn2:sourceRef>electricalPermitSubmitURL</bpmn2:sourceRef>
+        <bpmn2:targetRef>_9F11D643-3D5D-4099-BFD1-334B1406727C_submitURLInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GWlSZVF_EemBqtiz4qMe0A">
+        <bpmn2:sourceRef>electricalPermitStatusURL</bpmn2:sourceRef>
+        <bpmn2:targetRef>_9F11D643-3D5D-4099-BFD1-334B1406727C_statusURLInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_GWlSZlF_EemBqtiz4qMe0A">
+        <bpmn2:sourceRef>electricalPermitRescindURL</bpmn2:sourceRef>
+        <bpmn2:targetRef>_9F11D643-3D5D-4099-BFD1-334B1406727C_rescindURLInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
     </bpmn2:callActivity>
     <bpmn2:scriptTask id="_9B882BCB-8A12-4068-98B6-1047C738A134" drools:selectable="true" color:background-color="#fafad2" color:border-color="#000000" color:color="#000000" name="Init" scriptFormat="http://www.java.com/java">
       <bpmn2:extensionElements>
@@ -53,68 +86,68 @@ kcontext.setVariable("electricalPermitRescindURL",baseURL+"/permit/electrical/re
     <bpmn2:sequenceFlow id="_5CFD7147-884A-4891-AD6A-03B225055B52" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_9B882BCB-8A12-4068-98B6-1047C738A134" targetRef="_9F11D643-3D5D-4099-BFD1-334B1406727C"/>
     <bpmn2:sequenceFlow id="_0D38357F-84B1-4155-BD65-C4F77D05AE62" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="_9F11D643-3D5D-4099-BFD1-334B1406727C" targetRef="_EB682465-FFC1-4881-AA8E-61D45456A43A"/>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_0R3IsFF-EemBqtiz4qMe0A">
-    <bpmndi:BPMNPlane id="_0R3IsVF-EemBqtiz4qMe0A" bpmnElement="com.solarvillage.rhpam.poc.process.SolarVillageOrder">
-      <bpmndi:BPMNShape id="_0R3IslF-EemBqtiz4qMe0A" bpmnElement="processStartEvent">
+  <bpmndi:BPMNDiagram id="_GWl5cFF_EemBqtiz4qMe0A">
+    <bpmndi:BPMNPlane id="_GWl5cVF_EemBqtiz4qMe0A" bpmnElement="com.solarvillage.rhpam.poc.process.SolarVillageOrder">
+      <bpmndi:BPMNShape id="_GWl5clF_EemBqtiz4qMe0A" bpmnElement="processStartEvent">
         <dc:Bounds height="30.0" width="30.0" x="0.0" y="165.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_0R3Is1F-EemBqtiz4qMe0A" bpmnElement="_EB682465-FFC1-4881-AA8E-61D45456A43A">
+      <bpmndi:BPMNShape id="_GWl5c1F_EemBqtiz4qMe0A" bpmnElement="_EB682465-FFC1-4881-AA8E-61D45456A43A">
         <dc:Bounds height="28.0" width="28.0" x="540.0" y="240.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_0R3ItFF-EemBqtiz4qMe0A" bpmnElement="_9F11D643-3D5D-4099-BFD1-334B1406727C">
-        <dc:Bounds height="80.0" width="100.0" x="360.0" y="75.0"/>
+      <bpmndi:BPMNShape id="_GWl5dFF_EemBqtiz4qMe0A" bpmnElement="_9F11D643-3D5D-4099-BFD1-334B1406727C">
+        <dc:Bounds height="80.0" width="100.0" x="480.0" y="60.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_0R3ItVF-EemBqtiz4qMe0A" bpmnElement="_9B882BCB-8A12-4068-98B6-1047C738A134">
+      <bpmndi:BPMNShape id="_GWl5dVF_EemBqtiz4qMe0A" bpmnElement="_9B882BCB-8A12-4068-98B6-1047C738A134">
         <dc:Bounds height="80.0" width="100.0" x="105.0" y="105.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge id="_0R3ItlF-EemBqtiz4qMe0A" bpmnElement="_0C4B6523-8EB5-4895-BACC-2C3C4EB3BB5C" sourceElement="_0R3IslF-EemBqtiz4qMe0A" targetElement="_0R3ItVF-EemBqtiz4qMe0A">
+      <bpmndi:BPMNEdge id="_GWl5dlF_EemBqtiz4qMe0A" bpmnElement="_0C4B6523-8EB5-4895-BACC-2C3C4EB3BB5C" sourceElement="_GWl5clF_EemBqtiz4qMe0A" targetElement="_GWl5dVF_EemBqtiz4qMe0A">
         <di:waypoint xsi:type="dc:Point" x="15.0" y="180.0"/>
         <di:waypoint xsi:type="dc:Point" x="155.0" y="145.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_0R3It1F-EemBqtiz4qMe0A" bpmnElement="_5CFD7147-884A-4891-AD6A-03B225055B52" sourceElement="_0R3ItVF-EemBqtiz4qMe0A" targetElement="_0R3ItFF-EemBqtiz4qMe0A">
+      <bpmndi:BPMNEdge id="_GWl5d1F_EemBqtiz4qMe0A" bpmnElement="_5CFD7147-884A-4891-AD6A-03B225055B52" sourceElement="_GWl5dVF_EemBqtiz4qMe0A" targetElement="_GWl5dFF_EemBqtiz4qMe0A">
         <di:waypoint xsi:type="dc:Point" x="155.0" y="145.0"/>
-        <di:waypoint xsi:type="dc:Point" x="410.0" y="115.0"/>
+        <di:waypoint xsi:type="dc:Point" x="530.0" y="100.0"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="_0R3IuFF-EemBqtiz4qMe0A" bpmnElement="_0D38357F-84B1-4155-BD65-C4F77D05AE62" sourceElement="_0R3ItFF-EemBqtiz4qMe0A" targetElement="_0R3Is1F-EemBqtiz4qMe0A">
-        <di:waypoint xsi:type="dc:Point" x="410.0" y="115.0"/>
+      <bpmndi:BPMNEdge id="_GWl5eFF_EemBqtiz4qMe0A" bpmnElement="_0D38357F-84B1-4155-BD65-C4F77D05AE62" sourceElement="_GWl5dFF_EemBqtiz4qMe0A" targetElement="_GWl5c1F_EemBqtiz4qMe0A">
+        <di:waypoint xsi:type="dc:Point" x="530.0" y="100.0"/>
         <di:waypoint xsi:type="dc:Point" x="554.0" y="254.0"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_0R3IuVF-EemBqtiz4qMe0A" type="BPSimData">
+  <bpmn2:relationship id="_GWl5eVF_EemBqtiz4qMe0A" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0C4B6523-8EB5-4895-BACC-2C3C4EB3BB5C" id="_0R3IulF-EemBqtiz4qMe0A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0C4B6523-8EB5-4895-BACC-2C3C4EB3BB5C" id="_GWl5elF_EemBqtiz4qMe0A">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0D38357F-84B1-4155-BD65-C4F77D05AE62" id="_0R3Iu1F-EemBqtiz4qMe0A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0D38357F-84B1-4155-BD65-C4F77D05AE62" id="_GWl5e1F_EemBqtiz4qMe0A">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_EB682465-FFC1-4881-AA8E-61D45456A43A" id="_0R3IvFF-EemBqtiz4qMe0A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_EB682465-FFC1-4881-AA8E-61D45456A43A" id="_GWl5fFF_EemBqtiz4qMe0A">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5CFD7147-884A-4891-AD6A-03B225055B52" id="_0R3IvVF-EemBqtiz4qMe0A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5CFD7147-884A-4891-AD6A-03B225055B52" id="_GWl5fVF_EemBqtiz4qMe0A">
             <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
               <bpsim:Probability xsi:type="bpsim:Parameter">
                 <bpsim:FloatingParameter value="100.0"/>
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9F11D643-3D5D-4099-BFD1-334B1406727C" id="_0R3IvlF-EemBqtiz4qMe0A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9F11D643-3D5D-4099-BFD1-334B1406727C" id="_GWl5flF_EemBqtiz4qMe0A">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -126,7 +159,7 @@ kcontext.setVariable("electricalPermitRescindURL",baseURL+"/permit/electrical/re
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_0R3Iv1F-EemBqtiz4qMe0A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_GWl5f1F_EemBqtiz4qMe0A">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -138,7 +171,7 @@ kcontext.setVariable("electricalPermitRescindURL",baseURL+"/permit/electrical/re
               </bpsim:Probability>
             </bpsim:ControlParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9B882BCB-8A12-4068-98B6-1047C738A134" id="_0R3IwFF-EemBqtiz4qMe0A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_9B882BCB-8A12-4068-98B6-1047C738A134" id="_GWl5gFF_EemBqtiz4qMe0A">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -153,7 +186,7 @@ kcontext.setVariable("electricalPermitRescindURL",baseURL+"/permit/electrical/re
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_0R2hoFF-EemBqtiz4qMe0A</bpmn2:source>
-    <bpmn2:target>_0R2hoFF-EemBqtiz4qMe0A</bpmn2:target>
+    <bpmn2:source>_GWkEQFF_EemBqtiz4qMe0A</bpmn2:source>
+    <bpmn2:target>_GWkEQFF_EemBqtiz4qMe0A</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
