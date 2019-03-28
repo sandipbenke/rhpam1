@@ -6,12 +6,81 @@ package com.solarvillage.rhpam.poc.datamodal;
 
 public class Address implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Address() {
-    }
+	@org.kie.api.definition.type.Label(value = "attentionTo")
+	private java.lang.String attentionTO;
+	@org.kie.api.definition.type.Label(value = "line1")
+	private java.lang.String line1;
+	@org.kie.api.definition.type.Label(value = "line2")
+	private java.lang.String line2;
+	@org.kie.api.definition.type.Label(value = "city")
+	private java.lang.String city;
+	@org.kie.api.definition.type.Label(value = "state")
+	private java.lang.String state;
+	@org.kie.api.definition.type.Label(value = "zip")
+	private java.lang.String zip;
 
+	public Address() {
+	}
 
+	public java.lang.String getAttentionTO() {
+		return this.attentionTO;
+	}
 
+	public void setAttentionTO(java.lang.String attentionTO) {
+		this.attentionTO = attentionTO;
+	}
+
+	public java.lang.String getLine1() {
+		return this.line1;
+	}
+
+	public void setLine1(java.lang.String line1) {
+		this.line1 = line1;
+	}
+
+	public java.lang.String getLine2() {
+		return this.line2;
+	}
+
+	public void setLine2(java.lang.String line2) {
+		this.line2 = line2;
+	}
+
+	public java.lang.String getCity() {
+		return this.city;
+	}
+
+	public void setCity(java.lang.String city) {
+		this.city = city;
+	}
+
+	public java.lang.String getState() {
+		return this.state;
+	}
+
+	public void setState(java.lang.String state) {
+		this.state = state;
+	}
+
+	public java.lang.String getZip() {
+		return this.zip;
+	}
+
+	public void setZip(java.lang.String zip) {
+		this.zip = zip;
+	}
+
+	public Address(java.lang.String attentionTO, java.lang.String line1,
+			java.lang.String line2, java.lang.String city,
+			java.lang.String state, java.lang.String zip) {
+		this.attentionTO = attentionTO;
+		this.line1 = line1;
+		this.line2 = line2;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+	}
 
 }
