@@ -8,10 +8,22 @@ public class NewOrder implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "orderID")
+	@org.kie.api.definition.type.Label("orderID")
 	private java.lang.String orderID;
-	@org.kie.api.definition.type.Label(value = "projectPermits")
-	private java.util.List<com.solarvillage.rhpam.poc.datamodal.ProjectPermit> projectPermits;
+	@org.kie.api.definition.type.Label(value = "electricalPermit")
+	private com.solarvillage.rhpam.poc.datamodal.ProjectPermit electricalPermit;
+
+	@org.kie.api.definition.type.Label(value = "structuralPermit")
+	private com.solarvillage.rhpam.poc.datamodal.ProjectPermit structuralPermit;
+
+	@org.kie.api.definition.type.Label(value = "customer")
+	private com.solarvillage.rhpam.poc.datamodal.Customer customer;
+
+	@org.kie.api.definition.type.Label(value = "hoaAddress")
+	private com.solarvillage.rhpam.poc.datamodal.Address hoaAddress;
+
+	@org.kie.api.definition.type.Label(value = "hoaApproval")
+	private com.solarvillage.rhpam.poc.datamodal.ProjectPermit hoaApproval;
 
 	public NewOrder() {
 	}
@@ -24,20 +36,64 @@ public class NewOrder implements java.io.Serializable {
 		this.orderID = orderID;
 	}
 
-	public java.util.List<com.solarvillage.rhpam.poc.datamodal.ProjectPermit> getProjectPermits() {
-		return this.projectPermits;
+	public com.solarvillage.rhpam.poc.datamodal.ProjectPermit getElectricalPermit() {
+		return this.electricalPermit;
 	}
 
-	public void setProjectPermits(
-			java.util.List<com.solarvillage.rhpam.poc.datamodal.ProjectPermit> projectPermits) {
-		this.projectPermits = projectPermits;
+	public void setElectricalPermit(
+			com.solarvillage.rhpam.poc.datamodal.ProjectPermit electricalPermit) {
+		this.electricalPermit = electricalPermit;
+	}
+
+	public com.solarvillage.rhpam.poc.datamodal.ProjectPermit getStructuralPermit() {
+		return this.structuralPermit;
+	}
+
+	public void setStructuralPermit(
+			com.solarvillage.rhpam.poc.datamodal.ProjectPermit structuralPermit) {
+		this.structuralPermit = structuralPermit;
+	}
+
+	public com.solarvillage.rhpam.poc.datamodal.Customer getCustomer() {
+		return this.customer;
+	}
+
+	public void setCustomer(
+			com.solarvillage.rhpam.poc.datamodal.Customer customer) {
+		this.customer = customer;
+	}
+
+	public com.solarvillage.rhpam.poc.datamodal.Address getHoaAddress() {
+		return this.hoaAddress;
+	}
+
+	public void setHoaAddress(
+			com.solarvillage.rhpam.poc.datamodal.Address hoaAddress) {
+		this.hoaAddress = hoaAddress;
+	}
+
+	public com.solarvillage.rhpam.poc.datamodal.ProjectPermit getHoaApproval() {
+		return this.hoaApproval;
+	}
+
+	public void setHoaApproval(
+			com.solarvillage.rhpam.poc.datamodal.ProjectPermit hoaApproval) {
+		this.hoaApproval = hoaApproval;
 	}
 
 	public NewOrder(
 			java.lang.String orderID,
-			java.util.List<com.solarvillage.rhpam.poc.datamodal.ProjectPermit> projectPermits) {
+			com.solarvillage.rhpam.poc.datamodal.ProjectPermit electricalPermit,
+			com.solarvillage.rhpam.poc.datamodal.ProjectPermit structuralPermit,
+			com.solarvillage.rhpam.poc.datamodal.Customer customer,
+			com.solarvillage.rhpam.poc.datamodal.Address hoaAddress,
+			com.solarvillage.rhpam.poc.datamodal.ProjectPermit hoaApproval) {
 		this.orderID = orderID;
-		this.projectPermits = projectPermits;
+		this.electricalPermit = electricalPermit;
+		this.structuralPermit = structuralPermit;
+		this.customer = customer;
+		this.hoaAddress = hoaAddress;
+		this.hoaApproval = hoaApproval;
 	}
 
 }
