@@ -8,15 +8,15 @@ public class Customer implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "firstName")
+	@org.kie.api.definition.type.Label("firstName")
 	private java.lang.String firstName;
-	@org.kie.api.definition.type.Label(value = "lastName")
+	@org.kie.api.definition.type.Label("lastName")
 	private java.lang.String lastName;
-	@org.kie.api.definition.type.Label(value = "homeAdress")
-	private java.lang.String homeAdress;
-	@org.kie.api.definition.type.Label(value = "phoneNumber")
+	@org.kie.api.definition.type.Label("homeAdress")
+	private Address homeAdress;
+	@org.kie.api.definition.type.Label("phoneNumber")
 	private java.lang.String phoneNumber;
-	@org.kie.api.definition.type.Label(value = "email")
+	@org.kie.api.definition.type.Label("email")
 	private java.lang.String email;
 
 	public Customer() {
@@ -38,14 +38,6 @@ public class Customer implements java.io.Serializable {
 		this.lastName = lastName;
 	}
 
-	public java.lang.String getHomeAdress() {
-		return this.homeAdress;
-	}
-
-	public void setHomeAdress(java.lang.String homeAdress) {
-		this.homeAdress = homeAdress;
-	}
-
 	public java.lang.String getPhoneNumber() {
 		return this.phoneNumber;
 	}
@@ -62,9 +54,18 @@ public class Customer implements java.io.Serializable {
 		this.email = email;
 	}
 
+	public com.solarvillage.rhpam.poc.datamodal.Address getHomeAdress() {
+		return this.homeAdress;
+	}
+
+	public void setHomeAdress(
+			com.solarvillage.rhpam.poc.datamodal.Address homeAdress) {
+		this.homeAdress = homeAdress;
+	}
+
 	public Customer(java.lang.String firstName, java.lang.String lastName,
-			java.lang.String homeAdress, java.lang.String phoneNumber,
-			java.lang.String email) {
+			com.solarvillage.rhpam.poc.datamodal.Address homeAdress,
+			java.lang.String phoneNumber, java.lang.String email) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.homeAdress = homeAdress;
