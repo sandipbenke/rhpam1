@@ -6,12 +6,70 @@ package com.solarvillage.rhpam.poc.datamodal;
 
 public class Customer implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Customer() {
-    }
+	@org.kie.api.definition.type.Label(value = "firstName")
+	private java.lang.String firstName;
+	@org.kie.api.definition.type.Label(value = "lastName")
+	private java.lang.String lastName;
+	@org.kie.api.definition.type.Label(value = "homeAdress")
+	private java.lang.String homeAdress;
+	@org.kie.api.definition.type.Label(value = "phoneNumber")
+	private java.lang.String phoneNumber;
+	@org.kie.api.definition.type.Label(value = "email")
+	private java.lang.String email;
 
+	public Customer() {
+	}
 
+	public java.lang.String getFirstName() {
+		return this.firstName;
+	}
 
+	public void setFirstName(java.lang.String firstName) {
+		this.firstName = firstName;
+	}
+
+	public java.lang.String getLastName() {
+		return this.lastName;
+	}
+
+	public void setLastName(java.lang.String lastName) {
+		this.lastName = lastName;
+	}
+
+	public java.lang.String getHomeAdress() {
+		return this.homeAdress;
+	}
+
+	public void setHomeAdress(java.lang.String homeAdress) {
+		this.homeAdress = homeAdress;
+	}
+
+	public java.lang.String getPhoneNumber() {
+		return this.phoneNumber;
+	}
+
+	public void setPhoneNumber(java.lang.String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public java.lang.String getEmail() {
+		return this.email;
+	}
+
+	public void setEmail(java.lang.String email) {
+		this.email = email;
+	}
+
+	public Customer(java.lang.String firstName, java.lang.String lastName,
+			java.lang.String homeAdress, java.lang.String phoneNumber,
+			java.lang.String email) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.homeAdress = homeAdress;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+	}
 
 }
