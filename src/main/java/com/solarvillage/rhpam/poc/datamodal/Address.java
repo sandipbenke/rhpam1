@@ -83,4 +83,14 @@ public class Address implements java.io.Serializable {
 		this.zip = zip;
 	}
 
+public Address(java.lang.String line1,
+			java.lang.String line2, java.lang.String city,
+			java.lang.String state, java.lang.String zip) {
+		this.attentionTO = "";
+		this.line1 = line1;
+		this.line2 = line2;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+	}
 }
