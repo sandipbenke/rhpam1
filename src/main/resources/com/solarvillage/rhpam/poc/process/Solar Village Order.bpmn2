@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:drools="http://www.jboss.org/drools" id="_LKsC8FFxEemME62ZH2SZzg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:color="http://www.omg.org/spec/BPMN/non-normative/color" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_N0O4EFFxEemME62ZH2SZzg" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" exporter="jBPM Designer" exporterVersion="1.0" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.omg.org/bpmn20" typeLanguage="http://www.java.com/javaTypes">
   <bpmn2:itemDefinition id="_newOrderItem" structureRef="com.solarvillage.rhpam.poc.datamodal.NewOrder"/>
   <bpmn2:process id="com.solarvillage.rhpam.poc.process.SolarVillageOrder" drools:packageName="com.solarvillage.rhpam.poc.process" drools:version="1.0" name="Solar Village Order" isExecutable="true">
     <bpmn2:property id="newOrder" itemSubjectRef="_newOrderItem"/>
@@ -9,6 +9,7 @@
           <drools:metaValue><![CDATA[]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
+      <bpmn2:outgoing>_0C4B6523-8EB5-4895-BACC-2C3C4EB3BB5C</bpmn2:outgoing>
     </bpmn2:startEvent>
     <bpmn2:endEvent id="_EB682465-FFC1-4881-AA8E-61D45456A43A" drools:selectable="true" color:background-color="#ff6347" color:border-color="#000000" color:color="#000000" name="">
       <bpmn2:extensionElements>
@@ -16,31 +17,44 @@
           <drools:metaValue><![CDATA[]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
+      <bpmn2:incoming>_0C4B6523-8EB5-4895-BACC-2C3C4EB3BB5C</bpmn2:incoming>
     </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="_0C4B6523-8EB5-4895-BACC-2C3C4EB3BB5C" drools:selectable="true" color:background-color="#000000" color:border-color="#000000" color:color="#000000" sourceRef="processStartEvent" targetRef="_EB682465-FFC1-4881-AA8E-61D45456A43A"/>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_LKsC8VFxEemME62ZH2SZzg">
-    <bpmndi:BPMNPlane id="_LKsC8lFxEemME62ZH2SZzg" bpmnElement="com.solarvillage.rhpam.poc.process.SolarVillageOrder">
-      <bpmndi:BPMNShape id="_LKsC81FxEemME62ZH2SZzg" bpmnElement="processStartEvent">
+  <bpmndi:BPMNDiagram id="_N0O4EVFxEemME62ZH2SZzg">
+    <bpmndi:BPMNPlane id="_N0O4ElFxEemME62ZH2SZzg" bpmnElement="com.solarvillage.rhpam.poc.process.SolarVillageOrder">
+      <bpmndi:BPMNShape id="_N0O4E1FxEemME62ZH2SZzg" bpmnElement="processStartEvent">
         <dc:Bounds height="30.0" width="30.0" x="120.0" y="165.0"/>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="_LKsC9FFxEemME62ZH2SZzg" bpmnElement="_EB682465-FFC1-4881-AA8E-61D45456A43A">
-        <dc:Bounds height="28.0" width="28.0" x="1072.0" y="185.0"/>
+      <bpmndi:BPMNShape id="_N0O4FFFxEemME62ZH2SZzg" bpmnElement="_EB682465-FFC1-4881-AA8E-61D45456A43A">
+        <dc:Bounds height="28.0" width="28.0" x="540.0" y="240.0"/>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="_N0O4FVFxEemME62ZH2SZzg" bpmnElement="_0C4B6523-8EB5-4895-BACC-2C3C4EB3BB5C" sourceElement="_N0O4E1FxEemME62ZH2SZzg" targetElement="_N0O4FFFxEemME62ZH2SZzg">
+        <di:waypoint xsi:type="dc:Point" x="135.0" y="180.0"/>
+        <di:waypoint xsi:type="dc:Point" x="554.0" y="254.0"/>
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_LKsC9VFxEemME62ZH2SZzg" type="BPSimData">
+  <bpmn2:relationship id="_N0O4FlFxEemME62ZH2SZzg" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters" baseTimeUnit="min"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_EB682465-FFC1-4881-AA8E-61D45456A43A" id="_LKsC9lFxEemME62ZH2SZzg">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_0C4B6523-8EB5-4895-BACC-2C3C4EB3BB5C" id="_N0O4F1FxEemME62ZH2SZzg">
+            <bpsim:ControlParameters xsi:type="bpsim:ControlParameters">
+              <bpsim:Probability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="100.0"/>
+              </bpsim:Probability>
+            </bpsim:ControlParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_EB682465-FFC1-4881-AA8E-61D45456A43A" id="_N0O4GFFxEemME62ZH2SZzg">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_LKsC91FxEemME62ZH2SZzg">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="processStartEvent" id="_N0O4GVFxEemME62ZH2SZzg">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:UniformDistribution max="10.0" min="5.0"/>
@@ -55,7 +69,7 @@
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_LKsC8FFxEemME62ZH2SZzg</bpmn2:source>
-    <bpmn2:target>_LKsC8FFxEemME62ZH2SZzg</bpmn2:target>
+    <bpmn2:source>_N0O4EFFxEemME62ZH2SZzg</bpmn2:source>
+    <bpmn2:target>_N0O4EFFxEemME62ZH2SZzg</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
