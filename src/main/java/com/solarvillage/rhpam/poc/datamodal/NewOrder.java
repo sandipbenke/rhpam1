@@ -95,5 +95,17 @@ public class NewOrder implements java.io.Serializable {
 		this.hoaAddress = hoaAddress;
 		this.hoaApproval = hoaApproval;
 	}
+	
+		public NewOrder(
+			com.solarvillage.rhpam.poc.datamodal.Customer customer,
+			com.solarvillage.rhpam.poc.datamodal.Address hoaAddress,
+			com.solarvillage.rhpam.poc.datamodal.ProjectPermit hoaApproval) {
+		this.orderID = String.valueOf(System.currentTimeMillis());
+		this.electricalPermit = new com.solarvillage.rhpam.poc.datamodal.ProjectPermit();
+		this.structuralPermit = new com.solarvillage.rhpam.poc.datamodal.ProjectPermit();
+		this.customer = customer;
+		this.hoaAddress = hoaAddress;
+		this.hoaApproval = hoaApproval;
+	}
 
 }
